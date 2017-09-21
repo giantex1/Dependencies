@@ -1,0 +1,10 @@
+framework module PactConsumerSwift {
+  umbrella header "PactConsumerSwift.h"
+
+  export *
+  module * { export * }
+}
+
+module PactConsumerSwift.Swift {
+    header "PactConsumerSwift-Swift.h"
+}

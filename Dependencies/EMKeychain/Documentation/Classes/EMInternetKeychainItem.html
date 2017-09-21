@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 STRICT//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>EMInternetKeychainItem Class Reference</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/screen.css" />
+    <meta name="generator" content="DoxyClean" />
+  </head>
+  <body>
+    <div id="mainContainer"><h1><a name="classTitle" id="classTitle"></a>EMInternetKeychainItem Class Reference</h1>
+
+	<table summary="Basic information" id="classInfo">
+		<tr class="alt">
+			<td><label id="classDeclaration">Declared in</label></td>
+			<td>EMKeychainItem.h</td>
+		</tr>
+	</table>
+
+	<h2>Overview</h2>
+      <p>An <code>EMInternetKeychainItem</code> wraps the functionality and data-members associated with an internet keychain item.  Internet keychain items can optionally have a server, path, port, and protocol in addition to the standard keychain item properties. </p>
+    
+	<h2>Tasks</h2>
+	<h3>Other</h3>
+	<ul class="methods">
+			<li><span class="tooltipRegion"><code><a href="#server">server</a></code> <span class="specialType">property</span><span class="tooltip">
+            The keychain item's server. 
+          </span></span></li>
+			<li><span class="tooltipRegion"><code><a href="#path">path</a></code> <span class="specialType">property</span><span class="tooltip">
+            The keychain item's path. 
+          </span></span></li>
+			<li><span class="tooltipRegion"><code><a href="#port">port</a></code> <span class="specialType">property</span><span class="tooltip">
+            The keychain item's port. 
+          </span></span></li>
+			<li><span class="tooltipRegion"><code><a href="#protocol">protocol</a></code> <span class="specialType">property</span><span class="tooltip">
+            The keychain item's protocol. 
+          </span></span></li>
+	</ul>
+
+	<h3>Other</h3>
+	<ul class="methods">
+			<li><span class="tooltipRegion"><code><a href="#internetKeychainItemForServer:withUsername:path:port:protocol:">+ internetKeychainItemForServer:withUsername:path:port:protocol:</a></code><span class="tooltip"></span></span></li>
+			<li><span class="tooltipRegion"><code><a href="#addInternetKeychainItemForServer:withUsername:password:path:port:protocol:">+ addInternetKeychainItemForServer:withUsername:password:path:port:protocol:</a></code><span class="tooltip"></span></span></li>
+	</ul>
+
+		<h2>Properties</h2>
+		<h3><a name="server" id="server"></a>server</h3>
+            <p>The keychain item's server. </p>
+          <code class="methodDeclaration">@property <code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *server</code>
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h3><a name="path" id="path"></a>path</h3>
+            <p>The keychain item's path. </p>
+          <code class="methodDeclaration">@property <code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *path</code>
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h3><a name="port" id="port"></a>port</h3>
+            <p>The keychain item's port. </p>
+          <code class="methodDeclaration">@property NSInteger port</code>
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h3><a name="protocol" id="protocol"></a>protocol</h3>
+            <p>The keychain item's protocol. </p>
+          <code class="methodDeclaration">@property SecProtocolType protocol</code>
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h2>Class Methods</h2>
+		<h3><a name="internetKeychainItemForServer:withUsername:path:port:protocol:" id="internetKeychainItemForServer:withUsername:path:port:protocol:"></a>internetKeychainItemForServer:withUsername:path:port:protocol:</h3><code class="methodDeclaration">+ (EMInternetKeychainItem *)internetKeychainItemForServer:(<code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *)<span class="parameter">server</span> withUsername:(<code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *)<span class="parameter">username</span> path:(<code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *)<span class="parameter">path</span> port:(NSInteger)<span class="parameter">port</span> protocol:(SecProtocolType)<span class="parameter">protocol</span> </code>
+		<h5>Parameters</h5><dl class="parameterList">
+          <dt>server</dt><dd>
+              <p>The server. Cannot be nil. </p>
+            </dd>
+          <dt>username</dt><dd>
+              <p>The username. Cannot be nil. </p>
+            </dd>
+          <dt>path</dt><dd>
+              <p>The path. </p>
+            </dd>
+          <dt>port</dt><dd>
+              <p>The port. </p>
+            </dd>
+          <dt>protocol</dt><dd>
+              <p>The protocol. </p>
+            </dd>
+        </dl>
+		<h5>Return Value</h5>
+          <p>An <code>EMInternetKeychainItem</code> if the keychain item can be discovered. Otherwise, nil. </p>
+        
+		<h5>Discussion</h5>
+            <p>Returns, if possible, an internet keychain item that corresponds to the given server. </p>
+          
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h3><a name="addInternetKeychainItemForServer:withUsername:password:path:port:protocol:" id="addInternetKeychainItemForServer:withUsername:password:path:port:protocol:"></a>addInternetKeychainItemForServer:withUsername:password:path:port:protocol:</h3><code class="methodDeclaration">+ (EMInternetKeychainItem *)addInternetKeychainItemForServer:(<code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *)<span class="parameter">server</span> withUsername:(<code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *)<span class="parameter">username</span> password:(<code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *)<span class="parameter">password</span> path:(<code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *)<span class="parameter">path</span> port:(NSInteger)<span class="parameter">port</span> protocol:(SecProtocolType)<span class="parameter">protocol</span> </code>
+		<h5>Parameters</h5><dl class="parameterList">
+          <dt>server</dt><dd>
+              <p>The server. Cannot be nil. </p>
+            </dd>
+          <dt>username</dt><dd>
+              <p>The username. Cannot be nil. </p>
+            </dd>
+          <dt>password</dt><dd>
+              <p>The password to associate with the server, username, path, port, and protocol. Cannot be nil. </p>
+            </dd>
+          <dt>path</dt><dd>
+              <p>The path. </p>
+            </dd>
+          <dt>port</dt><dd>
+              <p>The port. </p>
+            </dd>
+          <dt>protocol</dt><dd>
+              <p>The protocol. </p>
+            </dd>
+        </dl>
+		<h5>Return Value</h5>
+          <p>An <code>EMInternetKeychainItem</code> if the item can be added to the keychain. Otherwise, nil. </p>
+        
+		<h5>Discussion</h5>
+            <p>Adds a keychain item for the given server. </p>
+          
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+<hr /><p id="lastUpdated">
+					Last updated: 2010-2-1</p></div>
+  </body>
+</html>

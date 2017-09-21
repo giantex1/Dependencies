@@ -1,0 +1,9 @@
+{
+  "commitish" : "v5.1.1",
+  "Mac" : [
+    {
+      "hash" : "0290b786f63d01ce88d2d1f76b92a32358b8e219764689f7ad8d7cb49c113e18",
+      "name" : "Nimble"
+    }
+  ]
+}

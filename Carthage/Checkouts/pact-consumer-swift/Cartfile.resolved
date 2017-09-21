@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire" "fa3c6d09b603f417c7788adb51ca0cade75b3d67"
+github "Quick/Nimble" "v5.1.1"
+github "Quick/Quick" "v0.10.0"
+github "antitypical/Result" "3.1.0"
+github "Thomvis/BrightFutures" "v5.1.0"

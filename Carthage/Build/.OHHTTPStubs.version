@@ -1,0 +1,9 @@
+{
+  "commitish" : "6.0.0",
+  "Mac" : [
+    {
+      "hash" : "e6792ef91d5da7f2d2099a9f1a42afc25277df42a5d869ff6a2b80b03f90a771",
+      "name" : "OHHTTPStubs"
+    }
+  ]
+}

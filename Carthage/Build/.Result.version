@@ -1,0 +1,9 @@
+{
+  "commitish" : "3.2.3",
+  "Mac" : [
+    {
+      "hash" : "1a3cb10c7c45146ffef3547147e3b58cc86ad51bbcbf87ff2445a7b86bf34345",
+      "name" : "Result"
+    }
+  ]
+}

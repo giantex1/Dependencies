@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 STRICT//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>EMKeychainItem Class Reference</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/screen.css" />
+    <meta name="generator" content="DoxyClean" />
+  </head>
+  <body>
+    <div id="mainContainer"><h1><a name="classTitle" id="classTitle"></a>EMKeychainItem Class Reference</h1>
+
+	<table summary="Basic information" id="classInfo">
+		<tr class="alt">
+			<td><label id="classDeclaration">Declared in</label></td>
+			<td>EMKeychainItem.h</td>
+		</tr>
+	</table>
+
+	<h2>Overview</h2>
+      <p><code>EMKeychainItem</code> is a self-contained wrapper class for two-way communication with the keychain. You can add, retrieve, and remove both generic and internet keychain items.  All keychain items have a username, password, and optionally a label. </p>
+    
+	<h2>Tasks</h2>
+	<h3>Other</h3>
+	<ul class="methods">
+			<li><span class="tooltipRegion"><code><a href="#username">username</a></code> <span class="specialType">property</span><span class="tooltip">
+            The keychain item's username. 
+          </span></span></li>
+			<li><span class="tooltipRegion"><code><a href="#password">password</a></code> <span class="specialType">property</span><span class="tooltip">
+            The keychain item's password. 
+          </span></span></li>
+			<li><span class="tooltipRegion"><code><a href="#label">label</a></code> <span class="specialType">property</span><span class="tooltip">
+            The keychain item's label. 
+          </span></span></li>
+	</ul>
+
+	<h3>Other</h3>
+	<ul class="methods">
+			<li><span class="tooltipRegion"><code><a href="#logsErrors">+ logsErrors</a></code><span class="tooltip"></span></span></li>
+			<li><span class="tooltipRegion"><code><a href="#setLogsErrors:">+ setLogsErrors:</a></code><span class="tooltip">
+            Sets whether or not errors are logged. 
+          </span></span></li>
+			<li><span class="tooltipRegion"><code><a href="#lockKeychain">+ lockKeychain</a></code><span class="tooltip">
+            Locks the keychain. 
+          </span></span></li>
+			<li><span class="tooltipRegion"><code><a href="#unlockKeychain">+ unlockKeychain</a></code><span class="tooltip">
+            Unlocks the keychain. 
+          </span></span></li>
+	</ul>
+
+	<h3>Other</h3>
+	<ul class="methods">
+			<li><span class="tooltipRegion"><code><a href="#removeFromKeychain">- removeFromKeychain</a></code><span class="tooltip"></span></span></li>
+			<li><span class="tooltipRegion"><code><a href="#_modifyAttributeWithTag:toBeValue:ofLength:">- _modifyAttributeWithTag:toBeValue:ofLength:</a></code><span class="tooltip"></span></span></li>
+	</ul>
+
+		<h2>Properties</h2>
+		<h3><a name="username" id="username"></a>username</h3>
+            <p>The keychain item's username. </p>
+          <code class="methodDeclaration">@property <code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *username</code>
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h3><a name="password" id="password"></a>password</h3>
+            <p>The keychain item's password. </p>
+          <code class="methodDeclaration">@property <code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *password</code>
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h3><a name="label" id="label"></a>label</h3>
+            <p>The keychain item's label. </p>
+          <code class="methodDeclaration">@property <code><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a></code> *label</code>
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h2>Class Methods</h2>
+		<h3><a name="logsErrors" id="logsErrors"></a>logsErrors</h3><code class="methodDeclaration">+ (BOOL)logsErrors</code>
+		<h5>Discussion</h5>
+            <p>Returns whether or not errors are logged.  Errors occur whenever a keychain item fails to appropriately update a property, or when a given keychain item cannot be found. </p>
+          
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h3><a name="setLogsErrors:" id="setLogsErrors:"></a>setLogsErrors:</h3>
+            <p>Sets whether or not errors are logged. </p>
+          <code class="methodDeclaration">+ (void)setLogsErrors:(BOOL)<span class="parameter">logsErrors</span> </code>
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h3><a name="lockKeychain" id="lockKeychain"></a>lockKeychain</h3>
+            <p>Locks the keychain. </p>
+          <code class="methodDeclaration">+ (void)lockKeychain</code>
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h3><a name="unlockKeychain" id="unlockKeychain"></a>unlockKeychain</h3>
+            <p>Unlocks the keychain. </p>
+          <code class="methodDeclaration">+ (void)unlockKeychain</code>
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h2>Instance Methods</h2>
+		<h3><a name="removeFromKeychain" id="removeFromKeychain"></a>removeFromKeychain</h3><code class="methodDeclaration">- (void)removeFromKeychain</code>
+		<h5>Discussion</h5>
+            <p>Removes the receiver from the keychain.  After calling this method, you should generally discard of the receiver. The receiver cannot be "re-added" to the keychain; invoke either addGenericKeychainItemForServer:... or addInternetKeychainItemForServer:... instead. </p>
+          
+		<h5>Declared In</h5><code>EMKeychainItem.h</code>
+
+		<h3><a name="_modifyAttributeWithTag:toBeValue:ofLength:" id="_modifyAttributeWithTag:toBeValue:ofLength:"></a>_modifyAttributeWithTag:toBeValue:ofLength:</h3><code class="methodDeclaration">- (void)_modifyAttributeWithTag:(SecItemAttr)<span class="parameter">attributeTag</span> toBeValue:(void *)<span class="parameter">newValue</span> ofLength:(UInt32)<span class="parameter">newLength</span> </code>
+		<h5>Parameters</h5><dl class="parameterList">
+          <dt>attributeTag</dt><dd>
+              <p>The attribute's tag. </p>
+            </dd>
+          <dt>newValue</dt><dd>
+              <p>A pointer to the new value. </p>
+            </dd>
+          <dt>newLength</dt><dd>
+              <p>The length of the new value. </p>
+            </dd>
+        </dl>
+		<h5>Discussion</h5>
+            <p>Modifies the given attribute to be newValue. </p>
+          
+		<h5>Declared In</h5><code>EMKeychainItem.m</code>
+<hr /><p id="lastUpdated">
+					Last updated: 2010-2-1</p></div>
+  </body>
+</html>

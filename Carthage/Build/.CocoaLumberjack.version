@@ -1,0 +1,13 @@
+{
+  "commitish" : "3a27c2611702f85b29557e2b51eaaf6326b15f39",
+  "Mac" : [
+    {
+      "hash" : "5efba464f0d71041869b5699167f57bd63afb321fd9b3ed335f8ac670cb5a403",
+      "name" : "CocoaLumberjackSwift"
+    },
+    {
+      "hash" : "6b99e938b90198853234ae4ec50e662b43eadb658500ee5a53e8631ceccce9f4",
+      "name" : "CocoaLumberjack"
+    }
+  ]
+}

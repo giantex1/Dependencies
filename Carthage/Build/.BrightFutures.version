@@ -1,0 +1,9 @@
+{
+  "commitish" : "5.2.0",
+  "Mac" : [
+    {
+      "hash" : "4190e38c9b0b97cd6fafa6f4984146fb663dbe0b4a90b9c3d971d7a0facde8aa",
+      "name" : "BrightFutures"
+    }
+  ]
+}

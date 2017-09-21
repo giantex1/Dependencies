@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="11762"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GTMOAuth2WindowController">
+            <connections>
+                <outlet property="keychainCheckbox" destination="43" id="46"/>
+                <outlet property="progressIndicator" destination="0hY-hU-ZgZ" id="q7f-8K-0zN"/>
+                <outlet property="webView" destination="5" id="49"/>
+                <outlet property="window" destination="3" id="8"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Sign In" allowsToolTipsWhenApplicationIsInactive="NO" restorable="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="3">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" bottomStrut="YES"/>
+            <rect key="contentRect" x="460" y="0.0" width="734" height="670"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <value key="minSize" type="size" width="475" height="290"/>
+            <view key="contentView" wantsLayer="YES" id="4">
+                <rect key="frame" x="0.0" y="0.0" width="734" height="670"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="43">
+                        <rect key="frame" x="18" y="19" width="220" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="216" id="nEc-Mj-P8o"/>
+                        </constraints>
+                        <buttonCell key="cell" type="check" title="Stay signed in to this account" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="44">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A7R-zD-FBs">
+                        <rect key="frame" x="18" y="633" width="197" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Please sign in to this account:" id="3ys-Gk-KDf">
+                            <font key="font" metaFont="systemBold"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jbQ-xC-kkm">
+                        <rect key="frame" x="612" y="13" width="108" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="NXa-ce-uu6"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5sh-RH-jHb">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeWindow:" target="-2" id="fou-gZ-z8C"/>
+                        </connections>
+                    </button>
+                    <box autoresizesSubviews="NO" wantsLayer="YES" boxType="custom" borderType="line" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="m9W-Sa-3lX">
+                        <rect key="frame" x="20" y="57" width="694" height="568"/>
+                        <view key="contentView" wantsLayer="YES" id="ntW-uk-4un">
+                            <rect key="frame" x="1" y="1" width="692" height="566"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <webView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                                    <rect key="frame" x="0.0" y="0.0" width="692" height="566"/>
+                                    <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                                        <nil key="identifier"/>
+                                    </webPreferences>
+                                </webView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" id="5Jk-7f-gOC"/>
+                                <constraint firstAttribute="bottom" secondItem="5" secondAttribute="bottom" id="Dlw-oN-l2C"/>
+                                <constraint firstItem="5" firstAttribute="top" secondItem="ntW-uk-4un" secondAttribute="top" id="aC9-TY-Za0"/>
+                                <constraint firstItem="5" firstAttribute="leading" secondItem="ntW-uk-4un" secondAttribute="leading" id="kBS-iT-It3"/>
+                            </constraints>
+                        </view>
+                        <color key="borderColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
+                    </box>
+                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="0hY-hU-ZgZ">
+                        <rect key="frame" x="594" y="22" width="16" height="16"/>
+                    </progressIndicator>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jbQ-xC-kkm" firstAttribute="centerY" secondItem="43" secondAttribute="centerY" id="02H-nR-2ln"/>
+                    <constraint firstItem="m9W-Sa-3lX" firstAttribute="top" secondItem="A7R-zD-FBs" secondAttribute="bottom" constant="8" symbolic="YES" id="3R2-j9-WgH"/>
+                    <constraint firstItem="jbQ-xC-kkm" firstAttribute="top" secondItem="43" secondAttribute="top" id="8w0-bP-i2v"/>
+                    <constraint firstItem="43" firstAttribute="top" secondItem="m9W-Sa-3lX" secondAttribute="bottom" constant="16" id="A53-25-VuY"/>
+                    <constraint firstItem="A7R-zD-FBs" firstAttribute="top" secondItem="4" secondAttribute="top" constant="20" symbolic="YES" id="B9d-s5-VjP"/>
+                    <constraint firstItem="jbQ-xC-kkm" firstAttribute="leading" secondItem="0hY-hU-ZgZ" secondAttribute="trailing" constant="8" symbolic="YES" id="FMK-kn-pmc"/>
+                    <constraint firstAttribute="trailing" secondItem="m9W-Sa-3lX" secondAttribute="trailing" constant="20" symbolic="YES" id="MY3-eW-Cqd"/>
+                    <constraint firstItem="0hY-hU-ZgZ" firstAttribute="centerY" secondItem="jbQ-xC-kkm" secondAttribute="centerY" id="Ux9-9h-vg5"/>
+                    <constraint firstItem="m9W-Sa-3lX" firstAttribute="trailing" secondItem="jbQ-xC-kkm" secondAttribute="trailing" id="bjS-eK-0Mm"/>
+                    <constraint firstAttribute="bottom" secondItem="jbQ-xC-kkm" secondAttribute="bottom" constant="20" symbolic="YES" id="dtm-uM-FSA"/>
+                    <constraint firstItem="A7R-zD-FBs" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="20" symbolic="YES" id="gnZ-ax-zow"/>
+                    <constraint firstItem="m9W-Sa-3lX" firstAttribute="leading" secondItem="A7R-zD-FBs" secondAttribute="leading" id="k7p-Dq-x7U"/>
+                    <constraint firstItem="m9W-Sa-3lX" firstAttribute="leading" secondItem="43" secondAttribute="leading" id="or5-wJ-bG7"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="7"/>
+            </connections>
+            <point key="canvasLocation" x="523" y="313"/>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="32"/>
+    </objects>
+</document>

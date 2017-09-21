@@ -1,0 +1,9 @@
+{
+  "commitish" : "89d360f70c7a9ea2127d0a14fcc212b298329d4f",
+  "Mac" : [
+    {
+      "hash" : "4e27472492e461473dc02578ab5ec16888ba5a1d6dc92cb41524af403cc559be",
+      "name" : "PactConsumerSwift"
+    }
+  ]
+}
